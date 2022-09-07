@@ -1,2 +1,2 @@
 # olleyp
-Olley-Pakes Productivity Decomposition for STATA
+This function implements the Olley-Pakes Productivity Growth Decomposition, for Stata.
