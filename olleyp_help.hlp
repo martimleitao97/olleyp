@@ -1,0 +1,71 @@
+{smcl}
+{title:Title}
+
+{p2col:{bf:olleyp}} Dynamic Olley-Pakes Productivity Decomposition
+
+{marker syntax}{...}
+
+{title:Syntax}
+
+{p}
+
+{cmd:olleyp} {varlist}{cmd:} [, {it:options}]
+
+{marker description}{...}
+
+{title:Description}
+
+{pstd}
+
+{cmd:olleyp} decomposes aggregate productivity growth between any pair of consecutive periods into the contribution of surviving firms, 
+exiting firms and entering firms in the spirit of Olley and Pakes (1992), Melitz and Polanec (2015) and Dias and Robalo Marques
+(2021). Furthermore, it splits the contribution of surviving firms into a market share reallocation effect and an unweigthed productivity 
+component. Four variables are required as inputs: (i) year variable; (ii) firm ID, (iii) productivity variable, and (iv) weigthing variable to 
+define market shares (this could be employment, value added, sales etc.). 
+
+{marker options}{...}
+
+{title:Options}
+
+{phang}{opt base(real)} First year needs to be selected in this option (baseline year). 
+
+{phang}{opt end(real)} End year needs to be selected in this option (end year). 
+
+{marker author}{...}
+
+{title:Author}
+
+{pstd}
+
+Martim Leit{c a~}o
+martimleitao97@gmail.com
+Center of Economics for Prosperity, Catolica-Lisbon
+
+{marker examples}{...}
+
+{title:Examples}
+
+{hline}
+
+{pstd}Setup: consider a panel dataset following different firms - uniquely identified by {cmd:firm_ID} - over time, {cmd:year}. 
+Yearly firm labor productivity (in logs) is given by a variable {cmd:log_prod}, and value added is given by {cmd:VA}. Total productivity 
+growth in the economy between consecutive periods can be split into the contribution of incumbent, newly entring and exiting firms in the economy.
+
+{phang2}{cmd:. olleyp year firm_ID log_prod VA, base(2008) end(2009)}
+
+{hline}
+
+{marker note}{...}
+
+{title:Note}
+
+{pstd}Notes: (i) Command was written in STATA 17.0.
+
+{marker References}{...}
+
+{title:References} 
+
+{pstd} Olley, Steven and Ariel Pakes, The dynamics of productivity in the telecommunications equipment industry, 1992
+{pstd} Melitz and Polanec, Dynamic Olley-Pakes productivity decomposition with entry and exit, The Rand journal of economics, 2015
+
+{hline}
